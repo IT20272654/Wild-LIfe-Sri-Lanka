@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import video from '../assets/wildlife.mp4';
+import Navigation from '../components/navigation.jsx';
 
 export default function LandingPage() {
 
@@ -21,42 +22,7 @@ export default function LandingPage() {
             </div>
 
             {/* Navigation */}
-            <nav className="container mx-auto px-4 py-6 flex justify-between items-center relative z-20">
-              <a href="#" className="text-white text-3xl font-bold z-20">
-                <span className="text-yellow-300">WildLife</span> Sri Lanka
-              </a>
-
-              <div className="hidden md:flex space-x-10 text-white text-lg">
-                {['Destinations', 'Tours', 'Gallery', 'Blog'].map((item) => (
-                  <a
-                    key={item}
-                    href="#"
-                    className="hover:text-yellow-300 transition font-medium"
-                  >
-                    {item}
-                  </a>
-                ))}
-                {/* Dropdowns would need to be converted to components with state */}
-              </div>
-
-              <a
-                href="#"
-                className="hidden md:block bg-yellow-500 hover:bg-yellow-600 text-blue-900 px-8 py-3 rounded-full transition font-medium text-lg"
-              >
-                Book Now
-              </a>
-
-              <button
-                className="md:hidden text-white z-40 p-2 fixed top-6 right-4 focus:outline-none"
-                aria-label="Toggle menu"
-              >
-                <div className="w-8 h-8 relative flex justify-center items-center">
-                  <span className="absolute h-1 w-8 bg-white rounded-full transform transition-all duration-300 -translate-y-2"></span>
-                  <span className="absolute h-1 w-8 bg-white rounded-full transition-all duration-300"></span>
-                  <span className="absolute h-1 w-8 bg-white rounded-full transform transition-all duration-300 translate-y-2"></span>
-                </div>
-              </button>
-            </nav>
+            <Navigation />
 
             {/* Hero Section */}
             <div className="relative container mx-auto px-4 flex items-center justify-start h-full min-h-72 md:min-h-screen z-10">
@@ -79,13 +45,24 @@ export default function LandingPage() {
             <div className="absolute bottom-10 md:bottom-16 left-4 md:left-8 lg:left-16 z-0">
             </div>
           </header>
-
-
-
-
-
         </div>
-
+<section class="bg-gray-100">
+    <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+            <div class="max-w-lg">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Explore the Wonder of Sri Lanka</h2>
+                <p class="mt-4 text-gray-600 text-lg text-justify">Wildlife in Sri Lanka is incredibly rich and diverse, thanks to its tropical climate and varied ecosystems. Despite its small size, the island is home to a wide range of animals, including elephants, leopards, sloth bears, crocodiles, and over 400 species of birds. Sri Lanka is also famous for its marine life, such as blue whales and dolphins. With numerous national parks like Yala, Wilpattu, and Udawalawe, the country offers excellent opportunities for wildlife safaris and eco-tourism, making it a top destination for nature lovers.</p>
+                <div class="mt-8">
+                    <a href="#" class="text-blue-500 hover:text-blue-600 font-medium">Learn more about us
+                        <span class="ml-2">&#8594;</span></a>
+                </div>
+            </div>
+            <div class="mt-12 md:mt-0">
+                <img src="https://images.unsplash.com/photo-1531973576160-7125cd663d86" alt="About Us Image" class="object-cover rounded-lg shadow-md"/>
+            </div>
+        </div>
+    </div>
+</section>
       </div>
   );
 }
